@@ -1507,7 +1507,7 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
+    padding: 0;
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1629,7 +1629,6 @@ to keep your styles reusable and consistent.
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
-    top: 1rem;
   }
 
   /* Main Work Area on Large Devices */
