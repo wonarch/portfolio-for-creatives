@@ -824,9 +824,7 @@ a.nav-link-primary:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(
-    --padding-tiny
-  ); /* Padding to keep content from touching edges */
+  padding: 0; /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
@@ -840,6 +838,7 @@ a.nav-link-primary:hover {
 /* Main Work Area with Sidebar on Mobile */
 .work-details {
   width: 100%;
+  padding: var(--padding-tiny);
 }
 
 /* Defining the work page grid */
@@ -1629,6 +1628,7 @@ to keep your styles reusable and consistent.
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
+    padding: 0 1.25rem;
   }
 
   /* Main Work Area on Large Devices */
