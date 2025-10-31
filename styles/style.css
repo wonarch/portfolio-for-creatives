@@ -824,7 +824,9 @@ a.nav-link-primary:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: 0; /* Padding to keep content from touching edges */
+  padding: var(
+    --padding-tiny
+  ); /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
@@ -838,7 +840,6 @@ a.nav-link-primary:hover {
 /* Main Work Area with Sidebar on Mobile */
 .work-details {
   width: 100%;
-  padding: var(--padding-tiny);
 }
 
 /* Defining the work page grid */
@@ -1457,8 +1458,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    margin: auto;
-    width: 70%;
+    width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1506,7 +1506,7 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: 0;
+    padding: var(--padding-small);
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1525,8 +1525,8 @@ to keep your styles reusable and consistent.
   /* Sidebar on Large Devices */
 
   .project-aside {
-    width: 20%;
-    height: 100vh;
+    width: 35%;
+    height: 80vh;
     position: -webkit-sticky;
     position: sticky;
     top: 8rem;
@@ -1624,17 +1624,17 @@ to keep your styles reusable and consistent.
   /* Work Sidebar on Large Devices */
 
   .work-sidebar {
-    width: 20%;
-    height: 100vh;
+    width: 25%;
+    height: 80vh;
     position: -webkit-sticky;
     position: sticky;
-    padding: 0 1.25rem;
+    top: 1rem;
   }
 
   /* Main Work Area on Large Devices */
 
   .work-details {
-    width: 80%;
+    width: 75%;
   }
 }
 
