@@ -822,7 +822,9 @@ a.nav-link-primary:hover {
 
 /* Padding around work grid and project page */
 .portfolio,
-.project-wrapper,
+.project-wrapper {
+  border: bright green 5px solid;
+}
 .work-sidebar-wrapper {
   padding: var(
     --padding-tiny
