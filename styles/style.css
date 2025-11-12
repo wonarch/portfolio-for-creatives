@@ -1130,6 +1130,7 @@ a.nav-link-primary:hover {
 
 /* Container for the project content with full-width display */
 .project-full-width {
+  padding: 2rem;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -1636,7 +1637,7 @@ to keep your styles reusable and consistent.
   /* Main Work Area on Large Devices */
 
   .work-details {
-    width: 75%;
+    width: 80%;
   }
 }
 
