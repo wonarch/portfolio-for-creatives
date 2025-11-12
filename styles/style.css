@@ -1630,7 +1630,7 @@ to keep your styles reusable and consistent.
 
   .work-sidebar {
     margin-right: 0.3rem;
-    width: 21%;
+    width: 25%;
     height: 95vh;
     position: -webkit-sticky;
     position: sticky;
@@ -1640,7 +1640,7 @@ to keep your styles reusable and consistent.
   /* Main Work Area on Large Devices */
 
   .work-details {
-    width: 79%;
+    width: 75%;
   }
 }
 

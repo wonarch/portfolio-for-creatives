@@ -13,60 +13,101 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="error-page">
-    <section class="hero">
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <li><a href="work.html" class="custom-navigation">Work</a></li>
-          <li class="nav-branding-logo">
-            <a href="index.html"><img src="assets/branding-images/logo.svg" alt="Your portfolio logo" /></a>
-          </li>
-          <li><a href="about.html" class="custom-navigation">About</a></li>
-        </ul>
-      </header>
+  <body class="work-sidebar-page">
+    <div class="work-sidebar-wrapper">
+      <aside class="work-sidebar border">
+        <header class="hero-header">
+          <ul class="nav-branding">
+            <li class="nav-branding-logo">
+              <a href="index.html"
+                ><img
+                  src="assets/branding-images/WON-Logo-color.svg"
+                  alt="Charlie Won Logo"
+              /></a>
+            </li>
+          </ul>
+        </header>
+        <div class="project-info">
+          <ul class="accordion-container">
+            <p>something about myself that is quick and punchy</p>
+            <li class="accordion-item">
+              <button class="accordion-button" data-panel="panel1">WORK</button>
+              <ul id="panel1" class="accordion-panel">
+                <li class="sidebar-nav-item">
+                  <a href="project-1.html">Project 1</a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="project-2.html">Project 2</a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="project-3.html">Project 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion-item">
+              <button class="accordion-button" data-panel="panel2">PLAY</button>
+              <ul id="panel2" class="accordion-panel">
+                <li class="sidebar-nav-item"><a href="play.html">Galleries</a></li>
+                <li class="sidebar-nav-item"><a href="play.html">Zines</a></li>
+                <li class="sidebar-nav-item"><a href="play.html">Crafts</a></li>
+                <li class="sidebar-nav-item"><a href="play.html">Fanart</a></li>
+              </ul>
+            </li>
+            <li class="accordion-item">
+              <button class="accordion-button" data-panel="panel3">
+                 <a href="about.html"> ABOUT</a>
+              </button>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!--hero-->
+      <main class="work-details">
+        <section class="hero">
       <div class="error-headline-wrapper">
         <a href="work.html"> <object type="image/svg+xml" data="assets/temp/boy-character-floating.svg" class="error-page-animation"></object></a>
         <h2 class="error-page-title error-404">404 File Not Found</h2>
         <h3>Create a custom error page that matches your personal brand.</h3>
         <p>The best 404 pages have become an art in themselves. Clever 404 pages almost act like 🐇 Easter eggs &mdash; hidden treats buried in a site &mdash; and that feeling of having found something unique can overcome the user's frustration of not getting to the page they wanted. See: <a href="https://www.creativebloq.com/web-design/best-404-pages-812505"> The best 404 pages for clever web design inspiration </a> and <a href="https://www.svgator.com/blog/404-page-error-animation-examples/">50+ 404 Page Error Animations to Aid Visitor Retention</a>.</p>
       </div>
-    </section>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <p>Feel free to reach out with any questions, collaborations, or just to chat about design.</p>
-      </li>
+       <!-- Footer -->
+        <ul class="footer-global">
+          <li class="footer-contact-social">
+            <h2>Send me a cipher.</h2>
+            <a href="mailto:charliewon.arch@gmail.com">charliewon.arch@gmail.com</a>
+            <!---social media icons here-->
+          </li>
 
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item"><a href="#">Dean’s List – Year or Term</a></li>
-          <li class="footer-item"><a href="#">Your Award – Name of Student Award and Year</a></li>
-          <li class="footer-item"><a href="#">Honourable Mention – Project or Competition Name</a></li>
-          <li class="footer-item"><a href="#">Other Recognition or Accolade</a></li>
+          <li class="footer-tagline">
+            <p>© Charlie Won 2024. All rights reserved.</p>
+          </li>
         </ul>
-      </li>
+      </section>
+      </main>
+    </div>
 
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Insta</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
-        </ul>
-      </li>
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-2.html">Next Project</a>
+    </div>
 
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent += new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+    <script src="./js/accordian.js"></script>
   </body>
 </html>
+
+  <body class="error-page">
+   
