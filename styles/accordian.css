@@ -1,8 +1,8 @@
 .accordion-container {
   max-width: 37.5rem;
-  margin: 3px auto;
+  margin: 0 auto;
   list-style: none;
-  padding: 0 0.75rem;
+  padding: 0 1.1rem;
 }
 
 .accordion-item {
@@ -18,7 +18,7 @@
   border-top-style: none;
   border-right-style: none;
   border-left-style: none;
-  border-bottom-style: 1px solid #0000ff;
+  border-bottom-style: 1px solid #3247ff;
   cursor: pointer;
   font-size: 2rem;
   font-family: var(--body-typeface);

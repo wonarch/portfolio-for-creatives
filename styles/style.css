@@ -109,7 +109,7 @@
   --font-family-heading: "Eczar", serif;
   --font-family-project-title: "Eczar", serif;
   /* Core Colours */
-  --color-text-primary: #222;
+  --color-text-primary: #3247ff;
   --color-text-secondary: #333;
   --color-accent-primary: #5200ff;
   --color-accent-secondary: #ff057c;
@@ -117,9 +117,9 @@
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #fdfdfd;
-  --color-bg-about: #f5f5f5;
-  --color-bg-footer: #f5f5f5;
+  --color-bg: #f8fbf2;
+  --color-bg-about: #f8fbf2;
+  --color-bg-footer: #3247ff;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #5200ff;
@@ -132,7 +132,7 @@
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
   --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
+  --color-text-project-sidebar: #3247ff;
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
@@ -150,7 +150,7 @@
   --color-bg-full-width: #f5f5f5;
   --color-bg-project-description: #f5f5f5;
   --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
+  --color-bg-sidebar-work: #f8fbf2;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
     -225deg,
@@ -161,7 +161,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #3247ff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -711,7 +711,7 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 10rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -827,7 +827,7 @@ a.nav-link-primary:hover {
 }
 .work-sidebar-wrapper {
   padding: var(
-    --padding-tiny
+    0 --padding-tiny
   ); /* Padding to keep content from touching edges */
 }
 
@@ -1078,8 +1078,9 @@ a.nav-link-primary:hover {
 }
 
 .footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
+  text-align: right;
+  font-size: 0.75rem; /* Slightly smaller for disclaimers or captions */
+  color: var(#f8fbf2); /* Themed color */
 }
 
 /* New item badges */
@@ -1462,7 +1463,7 @@ to keep your styles reusable and consistent.
 
   .nav-branding-logo {
     width: 10rem;
-    padding: 2rem 0;
+    padding: 2rem 0 1.5rem 0;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1510,9 +1511,8 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
+    position: sticky;
   }
-
   /* Project Page Flex Direction on Large Devices */
 
   .project-wrapper,
@@ -1621,24 +1621,24 @@ to keep your styles reusable and consistent.
   .footer-full-width {
     grid-row: 2 / 3;
     grid-column: 1 / 4; /* Spans all three columns */
-    text-align: center;
     align-self: end; /* Aligns content to bottom */
   }
 
   /* Work Sidebar on Large Devices */
 
   .work-sidebar {
-    width: 25%;
-    height: 80vh;
+    width: 20%;
+    height: 95vh;
     position: -webkit-sticky;
     position: sticky;
-    top: 1rem;
+    top: 0;
   }
 
   /* Main Work Area on Large Devices */
 
   .work-details {
     width: 80%;
+    padding: 1rem;
   }
 }
 
