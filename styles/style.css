@@ -140,9 +140,9 @@
   /* Navigation */
   --color-nav-link: #dc2222;
   --color-nav-link-hover: #dc2222;
-  --color-nav-arrow: #5200ff;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
+  --color-nav-arrow: #0000ff;
+  --color-nav-arrow-hover: #dc2222;
+  --color-nav-arrow-stroke: #0000ff;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
   --color-bg-full-width: #f5f5f5;
@@ -170,7 +170,7 @@
   /* Rounded Corners */
   --radius-sm: 0.5rem; /* Small interactive elements */
   --radius-md: 1rem; /* Cards/containers */
-  --radius-lg: 2rem; /* Large decorative elements */
+  --radius-lg: 0; /* Large decorative elements */
   --radius-full: 50%; /* Circles/pills */
   /* Padding Scale */
   --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
@@ -475,7 +475,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: var(--font-family-accent);
   font-style: italic;
   font-weight: 400;
@@ -573,7 +573,6 @@ sup {
 
 .highlight-gradient {
   background: var(--color-gradient-hero);
-  -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
 }
@@ -612,7 +611,6 @@ sup {
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
-  allign-text: right;
 }
 
 /*
@@ -1024,15 +1022,17 @@ a.nav-link-primary:hover {
 .footer-global {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
+  grid-gap: 0rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  color: #f8fbf2;
+  color: #f8fbf2 !important;
   background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-small); /* Internal spacing */
+  padding: var(--padding-large) var(--padding-small); /* Internal spacing */
 
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
-
+.footer-text {
+  color: #f8fbf2;
+}
 /* -------------------------------------------------------------------------- */
 /* 🧩 FOOTER SECTION PLACEMENT                                                */
 /* Each component stacks vertically in mobile view                             */
@@ -1048,7 +1048,10 @@ a.nav-link-primary:hover {
   grid-row: 2 / 3;
   background: goldenrod;
 }
-
+.footer-email {
+  padding-left: 2rem;
+  color: #f8fbf2;
+}
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
 /* Typically used for copyright/legal information                             */
@@ -1082,6 +1085,7 @@ a.nav-link-primary:hover {
 
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
+  color: #f8fbf2;
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
   margin-bottom: 0.25rem;
 }
@@ -1253,7 +1257,7 @@ a.nav-link-primary:hover {
 }
 
 .arrow {
-  padding: 0;
+  padding: 1rem;
 }
 
 /* ------------------------------- */
@@ -1581,12 +1585,12 @@ to keep your styles reusable and consistent.
   /* Main Project Image Area on Large Devices */
 
   .project-details {
-    width: 65%;
+    width: 100%;
   }
 
   .project-image-container,
   .project-description-container {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .section-container {
@@ -1596,7 +1600,7 @@ to keep your styles reusable and consistent.
 
   /* Column styles for two-column and four-column layouts (desktop) */
   .col-2 {
-    width: 50%;
+    width: 20% 80%;
   }
   .col-4 {
     width: 25%;
@@ -1629,25 +1633,26 @@ to keep your styles reusable and consistent.
   /* ------------------------------- */
   /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
   /* ------------------------------- */
-
+  .footer-text {
+    color: #f8fbf2;
+  }
   .footer-global {
-    padding-top: var(--padding-jumbo);
-    padding-right: var(--padding-medium);
-    padding-bottom: 0;
-    padding-left: var(--padding-medium);
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    color: #f8fbf2 !important;
+    padding-bottom: 1rem;
+    grid-template-columns: 2fr 1fr; /* Two equal columns */
   }
 
   /* Column 1: Tagline/Message */
   .footer-tagline {
     grid-column: 1 / 2;
-
     grid-row: 1 / 2;
     background: goldenrod;
   }
 
   /* Column 2: Awards & Works */
   .footer-highlights {
+    display: flex;
+    justify-content: flex-end;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background: lightcoral;
