@@ -175,7 +175,7 @@
   /* Padding Scale */
   --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
-  --padding-medium: rem; /* Standard spacing: desktop buttons, card content */
+  --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
   --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
   --padding-jumbo: 4rem; /* Hero elements: full-width containers, page headers */
   --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
@@ -225,7 +225,6 @@ html {
 body {
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
-  background: var(--color-bg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -497,7 +496,6 @@ h6 {
   font-family: var(--font-family-heading);
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: rem;
   color: var(--h6-color);
 }
 
@@ -863,13 +861,9 @@ a.nav-link-primary:hover {
 
 /* Padding around work grid and project page */
 .portfolio,
-.project-wrapper {
-  border: bright green 5px solid;
-}
+.project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(
-    0 --padding-tiny
-  ); /* Padding to keep content from touching edges */
+  padding: 0; /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
@@ -878,6 +872,11 @@ a.nav-link-primary:hover {
   background: var(
     --color-bg-sidebar-work
   ); /* Background color for the sidebar */
+}
+
+.short-about {
+  padding: 1rem0;
+  max-width: 30ch;
 }
 
 /* Main Work Area with Sidebar on Mobile */
@@ -943,10 +942,8 @@ a.nav-link-primary:hover {
 }
 
 /* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
-}
-
+/*.project-details-overlay {}
+  /* Placeholder: no custom styles yet*/
 /*
 
 ███████ ██ ██████  ███████ ██████   █████  ██████  
@@ -1128,7 +1125,7 @@ a.nav-link-primary:hover {
 .footer-fineprint {
   text-align: right;
   font-size: 0.75rem; /* Slightly smaller for disclaimers or captions */
-  color: var(#f8fbf2); /* Themed color */
+  color: #f8fbf2; /* Themed color */
 }
 
 /* New item badges */
@@ -1210,7 +1207,7 @@ a.nav-link-primary:hover {
   justify-content: flex-start;
   padding: 0;
   width: 100%;
-  max-width: 52.187rem;
+  max-width: 80ch;
   margin-bottom: 0rem; /* Space below the description */
 }
 
@@ -1218,7 +1215,7 @@ a.nav-link-primary:hover {
 .extra-doodle {
   border: green;
   width: 30%;
-  align-self: right;
+  align-self: flex-end;
 }
 /* Column styles for two-column and four-column layouts (mobile-first) */
 .col-2,
@@ -1381,37 +1378,21 @@ a.nav-link-primary:hover {
   margin: 0 auto;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Container needed to position the overlay. Adjust the width as needed */
-.error-container {
-  position: relative;
-  width: 100%;
-}
+/*  */
 
+.main-error-section {
+  background-repeat: no-repeat;
+  background-image: url(../assets/branding-images/CharlieWon-selfportrait.png);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-size: contain;
+}
 /* Make the image to responsive */
 .error-image {
   display: block;
   width: 100%;
   height: auto;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
-.error-overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
 }
 
 /* When you mouse over the container, fade in the overlay title */
@@ -1445,9 +1426,8 @@ For common layout or effects, continue using the base utility classes
 to keep your styles reusable and consistent.
 */
 
-.play-page {
-  /* Add page-specific layout or container styles here */
-}
+/*.play-page {}
+   Add page-specific layout or container styles here */
 
 /*
 
@@ -1578,10 +1558,6 @@ to keep your styles reusable and consistent.
     padding-bottom: var(--padding-small);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
-  }
-
-  .error-404 {
-    font-size: 5rem;
   }
 
   /* Work Page Grid for Large Devices */
@@ -1735,13 +1711,8 @@ to keep your styles reusable and consistent.
   }
 
   /* Main Work Area on Large Devices */
-
   .work-details {
     width: 80%;
-    background-image: url(img/CharlieWon-papertexture-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 }
 

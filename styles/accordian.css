@@ -4,6 +4,9 @@
   list-style: none;
   padding-left: 1.2rem;
 }
+.side-bio {
+  max-width: 30ch;
+}
 
 .accordion-item {
   list-style: none;
