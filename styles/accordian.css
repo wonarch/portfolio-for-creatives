@@ -18,6 +18,7 @@
   border-top-style: none;
   border-right-style: none;
   border-left-style: none;
+  border-bottom: solid;
   cursor: pointer;
   font-size: 2.5rem;
   font-family: var(--font-family-heading);
@@ -52,4 +53,28 @@
   max-height: 50rem;
   opacity: 1;
   padding: 1.25rem;
+}
+
+.sidebar-about {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  background: #f8fbf2;
+  text-align: left;
+  border-bottom: solid;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  color: #0000ff;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.sidebar-about:hover {
+  background: #f8fbf2;
+  transform: scale(1.02);
+  color: #dc2222;
+}
+.sidebar-about.active {
+  transform: scale(1.01);
 }
