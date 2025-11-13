@@ -1095,7 +1095,6 @@ a.nav-link-primary:hover {
 .footer-item {
   color: #f8fbf2;
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
-  padding-right: 1rem;
   margin-left: 2rem;
   margin-bottom: 0.25rem;
 }
