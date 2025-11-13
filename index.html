@@ -51,8 +51,8 @@
         </header>
         <div class="project-info">
           <ul class="accordion-container">
-            <p>something about myself that is quick and punchy</p>
             <li class="accordion-item">
+              <p>something about myself that is quick and punchy</p>
               <button class="accordion-button" data-panel="panel1">WORK</button>
               <ul id="panel1" class="accordion-panel">
                 <li class="sidebar-nav-item">
@@ -69,17 +69,16 @@
             <li class="accordion-item">
               <button class="accordion-button" data-panel="panel2">PLAY</button>
               <ul id="panel2" class="accordion-panel">
-                <li class="sidebar-nav-item"><a href="play.html">Galleries</a></li>
+                <li class="sidebar-nav-item">
+                  <a href="play.html">Galleries</a>
+                </li>
                 <li class="sidebar-nav-item"><a href="play.html">Zines</a></li>
                 <li class="sidebar-nav-item"><a href="play.html">Crafts</a></li>
                 <li class="sidebar-nav-item"><a href="play.html">Fanart</a></li>
               </ul>
             </li>
             <li class="accordion-item">
-              <button class="accordion-button" data-panel="panel3">
-                 <a href="about.html"> ABOUT</a>
-              </button>
-              </ul>
+              <a href="about.html" class="accordion-button"> ABOUT</a>
             </li>
           </ul>
         </div>
@@ -101,9 +100,7 @@
                   />
                 </figure>
                 <div class="project-details-overlay overlay centered-text">
-                  <h2 class="work-grid-project-title">
-                    Good Night Archives
-                  </h2>
+                  <h2 class="work-grid-project-title">Good Night Archives</h2>
                 </div>
               </a>
             </li>
@@ -215,9 +212,7 @@
                   />
                 </figure>
                 <div class="project-details-overlay overlay centered-text">
-                  <h2 class="work-grid-project-title">
-                    The Lovers
-                  </h2>
+                  <h2 class="work-grid-project-title">The Lovers</h2>
                 </div>
               </a>
             </li>
@@ -271,19 +266,35 @@
 
         <!-- Footer -->
         <ul class="footer-global">
-          <li class="footer-contact-social">
-            <h2 class="footer-accent">Send me a cipher.</h2>
-            <p class="footer-email">
-              <style>
-                a { color: #f8fbf2} /*footer email color*/
-              </style>
-              <a href="mailto:charliewon.arch@gmail.com">charliewon.arch@gmail.com</a>
+          <li class="footer-tagline">
+            <h2>Send me a cipher!</h2>
+            <p>
+              <a href="mailto:charliewon.arch@gmail.com"
+                >charliewon.arch@gmail.com</a
+              >
             </p>
-            <!---social media icons here-->
+
+            <ul class="footer-socials-list">
+              <li class="footer-item"><a href="#">Insta</a></li>
+              <li class="footer-item"><a href="#">LinkedIn</a></li>
+              <li class="footer-item"><a href="#">Behance</a></li>
+            </ul>
+          </li>
+          <li class="footer-highlights">
+            <h2>Doodle</h2>
           </li>
 
-          <li class="footer-tagline">
-            <p class="footer-copyright"> © Charlie Won 2024. All rights reserved.</p>
+          <li class="footer-full-width">
+            <p><a href="#top">Smooth scroll to the top</a></p>
+            <p class="footer-fineprint">
+              &copy; <span id="copyright-years">2020-</span>. Hand crafted with
+              <span class="heart">❤</span>
+              by James Neufeld.
+            </p>
+            <script>
+              document.getElementById("copyright-years").textContent +=
+                new Date().getFullYear();
+            </script>
           </li>
         </ul>
       </main>
