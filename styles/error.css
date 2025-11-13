@@ -1,6 +1,10 @@
+.error-page-title {
+  font-size: 50px;
+}
+
 /* Error 404 text with gradient and glitch */
 .error-404 {
-  font-size: 2rem;
+  font-size: 30rem;
   background: var(--color-gradient-hero);
   -webkit-background-clip: text;
   background-clip: text;

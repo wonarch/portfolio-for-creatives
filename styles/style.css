@@ -108,11 +108,11 @@
   --font-family-accent: "Inria Serif", serif;
   /* Core Colours */
   --color-text-primary: #0000ff;
-  --color-text-secondary: #333;
+  --color-text-secondary: #0000ff;
   --color-accent-primary: #0000ff;
-  --color-accent-secondary: #ff057c;
+  --color-accent-secondary: #333;
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
-  --color-highlight: lemonchiffon;
+  --color-highlight: #ffffce;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #f8fbf2;
@@ -291,7 +291,7 @@ svg {
 
 /* Adds a dashed border to help you see the box while you're designing */
 .border {
-  border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
+  border: 0px dashed var(--color-accent-primary); /*This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
 }
 
@@ -446,7 +446,6 @@ svg {
    ██       ██    ██      ██    ██ ██    ██ ██   ██ ██   ██ ██      ██   ██    ██    
    ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██    
 */
-
 /* Heading Styles (h1 - h6) */
 
 h1 {
@@ -489,7 +488,7 @@ h5 {
   font-family: var(--font-family-body);
   font-weight: 300;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--h5-color);
 }
 
@@ -498,10 +497,13 @@ h6 {
   font-family: var(--font-family-heading);
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: rem;
   color: var(--h6-color);
 }
 
+jumbo-text {
+  font-size: 50rem;
+}
 /* ------------------------------------------------------------------ */
 /* 📝 Paragraph and Text Styles                                       */
 /* Base text styles for body copy, bold, italic, and fine print       */
@@ -530,6 +532,10 @@ sup {
   font-size: 0.6em; /* smaller than the surrounding text */
   vertical-align: super; /* ensures it sits above the baseline */
   font-weight: normal; /* optional: adjust weight */
+}
+
+jumbo-text {
+  font-size: 50rem;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1043,12 +1049,10 @@ a.nav-link-primary:hover {
 .footer-tagline {
   grid-column: 1 / 2; /* Full width (single column) */
   grid-row: 1 / 2;
-  background: lemonchiffon;
 }
 .footer-highlights {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background: goldenrod;
 }
 .footer-email {
   padding-left: 2rem;
@@ -1078,6 +1082,8 @@ a.nav-link-primary:hover {
   margin-bottom: 2rem;
 }
 .footer-socials-list {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 2rem;
 }
 
@@ -1089,6 +1095,8 @@ a.nav-link-primary:hover {
 .footer-item {
   color: #f8fbf2;
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
+  padding-right: 1rem;
+  margin-left: 2rem;
   margin-bottom: 0.25rem;
 }
 
@@ -1201,10 +1209,10 @@ a.nav-link-primary:hover {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background: var(--color-bg-project-description);
   padding: 0;
   width: 100%;
-  margin-bottom: 1rem; /* Space below the description */
+  max-width: 52.187rem;
+  margin-bottom: 0rem; /* Space below the description */
 }
 
 /* Doodle to give each page personality */
@@ -1217,7 +1225,6 @@ a.nav-link-primary:hover {
 .col-2,
 .col-4 {
   width: 100%;
-  padding: var(--padding-small);
 }
 
 /* Project image styling */
@@ -1239,9 +1246,7 @@ a.nav-link-primary:hover {
 .project-details {
   width: 100%;
   padding: var(--padding-small);
-  background: var(
-    --color-gradient-project-details
-  ); /* TODO: Remove gradient background if you prefer a simpler design */
+  /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
 /* Previous/Next Arrow Styles */
@@ -1273,12 +1278,13 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 
 .project-info-list {
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
 }
 .project-item {
   font-size: 1rem;
-  line-height: 1.2; /* Consistent line height for project items to improve spacing */
-  margin-bottom: 0.25rem;
+  line-height: 1; /* Consistent line height for project items to improve spacing */
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 /*
@@ -1515,7 +1521,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 70%;
+    width: 14rem;
     padding: 2.2rem 0 1.5rem 0;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
@@ -1594,6 +1600,7 @@ to keep your styles reusable and consistent.
 
   .project-details {
     width: 100%;
+    padding: 0 1rem 0 17%;
   }
 
   .project-image-container,
@@ -1659,7 +1666,6 @@ to keep your styles reusable and consistent.
   .footer-tagline {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background: goldenrod;
   }
 
   /* Column 2: Awards & Works */
@@ -1668,7 +1674,6 @@ to keep your styles reusable and consistent.
     justify-content: flex-end;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background: lightcoral;
   }
 
   /* ------------------------------- */
@@ -1684,7 +1689,8 @@ to keep your styles reusable and consistent.
 
   .work-sidebar {
     margin-right: 0.3rem;
-    width: 25%;
+    width: 20%;
+    min-width: 18.5rem;
     height: 95vh;
     position: -webkit-sticky;
     position: sticky;
@@ -1694,7 +1700,11 @@ to keep your styles reusable and consistent.
   /* Main Work Area on Large Devices */
 
   .work-details {
-    width: 75%;
+    width: 80%;
+    background-image: url(img/CharlieWon-papertexture-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 

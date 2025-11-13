@@ -4,8 +4,12 @@ document.querySelectorAll(".accordion-button").forEach((button) => {
     const isActive = button.classList.contains("active");
 
     // Close all panels
-    document.querySelectorAll(".accordion-button").forEach((btn) => btn.classList.remove("active"));
-    document.querySelectorAll(".accordion-panel").forEach((pnl) => pnl.classList.remove("active"));
+    document
+      .querySelectorAll(".accordion-button")
+      .forEach((btn) => btn.classList.remove("active"));
+    document
+      .querySelectorAll(".accordion-panel")
+      .forEach((pnl) => pnl.classList.remove("active"));
 
     // Toggle the clicked panel
     if (!isActive) {
