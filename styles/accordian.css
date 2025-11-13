@@ -18,16 +18,19 @@
   border-top-style: none;
   border-right-style: none;
   border-left-style: none;
-  border-bottom-style: 1px solid #3247ff;
+  border-bottom-style: 0.01rem solid #0000ff;
   cursor: pointer;
-  font-size: 2rem;
-  font-family: var(--body-typeface);
+  font-size: 2.5rem;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  color: #0000ff;
   transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
 .accordion-button:hover {
   background: #f8fbf2;
   transform: scale(1.02);
+  color: #dc2222;
 }
 
 .accordion-button.active {

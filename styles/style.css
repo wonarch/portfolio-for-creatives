@@ -32,16 +32,14 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Eczar Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+/* Space Grotesk Font (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
-/* Rubik Font (clean and modern for body text) */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
+/* Outfit Font (clean and modern for body text) */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*
+/* Inria Serif Font (serif for the vibes) */
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 /* 
 ██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
@@ -105,13 +103,13 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Eczar", serif;
-  --font-family-project-title: "Eczar", serif;
+  --font-family-body: "Outfit", sans-serif;
+  --font-family-heading: "Space Grotesk", sans-serif;
+  --font-family-accent: "Inria Serif", serif;
   /* Core Colours */
-  --color-text-primary: #3247ff;
+  --color-text-primary: #0000ff;
   --color-text-secondary: #333;
-  --color-accent-primary: #5200ff;
+  --color-accent-primary: #0000ff;
   --color-accent-secondary: #ff057c;
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
@@ -119,29 +117,29 @@
   /* Backgrounds */
   --color-bg: #f8fbf2;
   --color-bg-about: #f8fbf2;
-  --color-bg-footer: #3247ff;
+  --color-bg-footer: #0000ff;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #5200ff;
-  --h2-color: #5200ff;
-  --h3-color: #5200ff;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h1-color: #0000ff;
+  --h2-color: #0000ff;
+  --h3-color: #0000ff;
+  --h4-color: #0000ff;
+  --h5-color: #0000ff;
+  --h6-color: #0000ff;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
   --color-text-project-description: #222;
-  --color-text-project-sidebar: #3247ff;
-  --color-text-project-title: #5200ff;
+  --color-text-project-sidebar: #0000ff;
+  --color-text-project-title: #0000ff;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #5200ff;
+  --color-link: #0000ff;
   --color-link-hover: #111;
-  --color-link-visited: #5200ff;
+  --color-link-visited: #dc2222;
   /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
+  --color-nav-link: #dc2222;
+  --color-nav-link-hover: #dc2222;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
@@ -161,7 +159,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #3247ff;
+  --color-bg-selection: #0000ff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -452,16 +450,19 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 4rem;
   font-family: var(--font-family-heading);
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
 h2 {
-  font-size: 2rem;
-  font-family: var(--font-family-heading);
+  font-size: 0.25rem;
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h2-color);
@@ -476,20 +477,27 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h4-color);
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-family: var(--font-family-body);
+  font-weight: 300;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.75rem;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h6-color);
@@ -501,7 +509,10 @@ h6 {
 /* ------------------------------------------------------------------ */
 
 p {
-  font-size: 1rem;
+  font-family: var(--font-family-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
@@ -570,7 +581,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 2rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
@@ -578,6 +589,31 @@ sup {
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
   color: var(--color-text-project-category);
+}
+
+/*footer styles */
+.footer-accent {
+  color: #f8fbf2;
+  font-family: var(--font-family-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.footer-email {
+  color: #f8fbf2;
+  font-family: var(--font-family-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.footer-copyright {
+  font-family: var(--font-family-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  allign-text: right;
 }
 
 /*
@@ -1168,6 +1204,12 @@ a.nav-link-primary:hover {
   margin-bottom: 1rem; /* Space below the description */
 }
 
+/* Doodle to give each page personality */
+.extra-doodle {
+  border: green;
+  width: 30%;
+  align-self: right;
+}
 /* Column styles for two-column and four-column layouts (mobile-first) */
 .col-2,
 .col-4 {
