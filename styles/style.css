@@ -135,7 +135,7 @@
   --color-text-work-grid-title: #ffffff;
   /* Link States */
   --color-link: #0000ff;
-  --color-link-hover: #111;
+  --color-link-hover: #dc2222;
   --color-link-visited: #0000ff;
   /* Navigation */
   --color-nav-link: #dc2222;
@@ -517,6 +517,8 @@ p {
 }
 
 strong {
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
   font-weight: 700; /* Makes text bold */
 }
 
@@ -1199,9 +1201,8 @@ a.nav-link-primary:hover {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
   background: var(--color-bg-project-description);
-  padding: var(--padding-small);
+  padding: 0;
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
@@ -1220,6 +1221,13 @@ a.nav-link-primary:hover {
 }
 
 /* Project image styling */
+.project-image-hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
 .project-image {
   width: 100%;
   display: flex;
@@ -1590,7 +1598,7 @@ to keep your styles reusable and consistent.
 
   .project-image-container,
   .project-description-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .section-container {
@@ -1600,14 +1608,19 @@ to keep your styles reusable and consistent.
 
   /* Column styles for two-column and four-column layouts (desktop) */
   .col-2 {
-    width: 20% 80%;
+    width: 50%;
   }
   .col-4 {
     width: 25%;
   }
 
   .project-navigation {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .arrow {
