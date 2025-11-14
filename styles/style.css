@@ -224,6 +224,7 @@ html {
 
 body {
   font-family: var(--font-family-body);
+  background-color: #f8fbf2;
   color: var(--color-text-primary);
   display: flex;
   flex-direction: column;
@@ -874,13 +875,9 @@ a.nav-link-primary:hover {
   ); /* Background color for the sidebar */
 }
 
-.short-about {
-  padding: 1rem0;
-  max-width: 30ch;
-}
-
 /* Main Work Area with Sidebar on Mobile */
 .work-details {
+  background-image: url(../assets/branding-images/CharlieWon-papertexture-background.jpg);
   width: 100%;
 }
 
@@ -1379,22 +1376,15 @@ a.nav-link-primary:hover {
 }
 
 /* Container needed to position the overlay. Adjust the width as needed */
-/*  */
 
 .main-error-section {
   background-repeat: no-repeat;
-  background-image: url(../assets/branding-images/CharlieWon-selfportrait.png);
+  background-image: url(../assets/branding-images/CharlieWon-selfportrait.png),
+    url(../assets/branding-images/CharlieWon-papertexture-background.jpg);
   background-position-x: left;
   background-position-y: bottom;
-  background-size: contain;
+  background-size: contain, cover;
 }
-/* Make the image to responsive */
-.error-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* When you mouse over the container, fade in the overlay title */
 .container:hover .overlay {
   opacity: 1;
