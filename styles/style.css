@@ -989,7 +989,7 @@ a.nav-link-primary:hover {
   display: grid; /* Set to grid layout */
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
-  background: var(--color-bg-about); /* Background color for the section */
+  background: url(../assets/branding-images/CharlieWon-papertexture-background.jpg); /* Background color for the section */
   padding: var(--padding-medium); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
 }
