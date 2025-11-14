@@ -449,11 +449,11 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: var(--font-family-heading);
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--h1-color);
 }
 
@@ -479,7 +479,7 @@ h4 {
   font-style: italic;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
   color: var(--h4-color);
 }
 
@@ -958,7 +958,7 @@ a.nav-link-primary:hover {
 /* website. The aim is to create a simple and clean sidebar for better access. */
 /* -------------------------------------------------------------------------- */
 
-/* Sidebar navigation list styles */
+/* Sidebar navi-gridgation list styles */
 .sidebar-nav-list {
   padding: var(--padding-small); /* Adds padding around the navigation list */
 }
@@ -1002,6 +1002,7 @@ a.nav-link-primary:hover {
 
 /* Text section in the About page grid */
 .about-grid-text {
+  max-width: 45ch;
   grid-column: 1 / 2; /* Text spans the first column */
   grid-row: 2 / 3; /* Text spans the second row */
 }
