@@ -938,6 +938,12 @@ a.nav-link-primary:hover {
   opacity: 1; /* Set opacity on hover */
 }
 
+.vimeo-container {
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+}
 /* Optional container for future overlay customization */
 /*.project-details-overlay {}
   /* Placeholder: no custom styles yet*/
@@ -990,7 +996,7 @@ a.nav-link-primary:hover {
   min-height: 80vh;
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
-  background: url(../assets/branding-images/CharlieWon-papertexture-background.jpg); /* Background color for the section */
+  background: url(../assets/branding-images/CharlieWon-papertexture-background3.jpg); /* Background color for the section */
   padding: var(--padding-medium); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
 }
