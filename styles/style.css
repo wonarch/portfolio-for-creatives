@@ -560,6 +560,7 @@ jumbo-text {
 
 /* Project description text — pairs with the project title */
 .project-description {
+  text-align: center;
   font-size: 1.225rem;
   line-height: 1.2;
   color: var(--color-accent-primary);
