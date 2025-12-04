@@ -1042,7 +1042,6 @@ a.nav-link-primary:hover {
   color: #f8fbf2 !important;
   background: var(--color-bg-footer); /* Using CSS variable for theming */
   padding: var(--padding-large) var(--padding-small); /* Internal spacing */
-  margin-top: var(--padding-large);
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
 .footer-text {
