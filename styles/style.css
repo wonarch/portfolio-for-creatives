@@ -1072,7 +1072,7 @@ a.nav-link-primary:hover {
 .footer-full-width {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
-  text-align: center; /* Center copyright text */
+  text-align: right; /* Center copyright text */
   align-self: end; /* Push to bottom */
 }
 
@@ -1256,7 +1256,6 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  margin-top: 3rem;
 }
 .project-image-portrait {
   width: 50%;
