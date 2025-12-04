@@ -562,7 +562,7 @@ jumbo-text {
 .project-description {
   font-size: 1.225rem;
   line-height: 1.2;
-  color: var(--color-text-project-description);
+  color: var(--color-accent-primary);
   margin-bottom: 1rem;
 }
 
@@ -944,6 +944,11 @@ a.nav-link-primary:hover {
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
+
+.long-illustration {
+  display: flex;
+  flex-direction: column;
+}
 /* Optional container for future overlay customization */
 /*.project-details-overlay {}
   /* Placeholder: no custom styles yet*/
@@ -1216,6 +1221,15 @@ a.nav-link-primary:hover {
   margin-bottom: 0rem; /* Space below the description */
 }
 
+.project-description-container-portrait {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+  max-width: 80ch;
+  margin-bottom: 0rem; /* Space below the description */
+}
 /* Doodle to give each page personality */
 .extra-doodle {
   border: green;
@@ -1242,6 +1256,14 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.project-image-portrait {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem 3rem 3rem;
 }
 /* Project details section */
 .project-details {
@@ -1250,6 +1272,11 @@ a.nav-link-primary:hover {
   /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
+.project-details-long {
+  width: 100%;
+  padding: var(--padding-small);
+  display: flex;
+}
 /* Previous/Next Arrow Styles */
 
 .project-navigation {
