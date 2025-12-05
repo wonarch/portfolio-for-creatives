@@ -514,7 +514,7 @@ p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1rem;
-  max-width: 60ch;
+  max-width: 50ch;
 }
 
 strong {
@@ -878,7 +878,7 @@ a.nav-link-primary:hover {
 
 /* Main Work Area with Sidebar on Mobile */
 .work-details {
-  background-image: url(../assets/branding-images/CharlieWon-papertexture-background2.jpg);
+  background-image: url(../assets/branding-images/CharlieWon-papertexture-background5.jpg);
   width: 100%;
 }
 
@@ -1414,7 +1414,7 @@ a.nav-link-primary:hover {
 .main-error-section {
   background-repeat: no-repeat;
   background-image: url(../assets/branding-images/CharlieWon-selfportrait.png),
-    url(../assets/branding-images/CharlieWon-papertexture-background.jpg);
+    url(../assets/branding-images/CharlieWon-papertexture-background5.jpg);
   background-position-x: left;
   background-position-y: bottom;
   background-size: contain, cover;
@@ -1637,7 +1637,7 @@ to keep your styles reusable and consistent.
 
   .project-details {
     width: 100%;
-    padding: 0 1rem 0 17%;
+    padding: 0 1rem 0 23%;
   }
 
   .project-image-container,
